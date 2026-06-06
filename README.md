@@ -21,27 +21,7 @@ A Customer Relationship Management (CRM) Web Application built using Flask and S
 - CSS
 - JavaScript
 
-## Project Structure
-
-Mini_CRM
-│
-├── app.py
-├── database.db
-├── requirements.txt
-│
-├── templates
-│ ├── index.html
-│ ├── add_customer.html
-│ └── edit_customer.html
-│
-├── static
-│ ├── css
-│ │ └── style.css
-│ │
-│ └── js
-│ └── script.js
-│
-└── README.md
+d
 
 ## Run Project
 
