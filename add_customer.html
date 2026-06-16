@@ -5,12 +5,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Edit Customer | Mini CRM</title>
+    <title>Add Customer | Mini CRM</title>
 
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-    />
+    <link rel="stylesheet" href="/style.css" />
 
     <link
       rel="stylesheet"
@@ -23,22 +20,22 @@
       <div class="form-card">
         <div class="form-header">
           <div class="form-icon">
-            <i class="fa-solid fa-user-pen"></i>
+            <i class="fa-solid fa-user-plus"></i>
           </div>
 
-          <h1>Edit Customer</h1>
+          <h1>Add New Customer</h1>
 
-          <p>Update customer information and save the changes.</p>
+          <p>Enter customer details to save them into the CRM system.</p>
         </div>
 
-        <form method="POST">
+        <form action="/add" method="POST">
           <div class="input-group">
             <label> Customer Name </label>
 
             <input
               type="text"
               name="name"
-              value="{{ customer.name }}"
+              placeholder="Enter customer name"
               required
             />
           </div>
@@ -49,7 +46,7 @@
             <input
               type="email"
               name="email"
-              value="{{ customer.email }}"
+              placeholder="Enter email address"
               required
             />
           </div>
@@ -60,15 +57,15 @@
             <input
               type="text"
               name="phone"
-              value="{{ customer.phone }}"
+              placeholder="Enter phone number"
               required
             />
           </div>
 
           <div class="form-buttons">
             <button type="submit" class="save-btn">
-              <i class="fa-solid fa-rotate"></i>
-              Update Customer
+              <i class="fa-solid fa-floppy-disk"></i>
+              Save Customer
             </button>
 
             <a href="/" class="back-btn">

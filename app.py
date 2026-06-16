@@ -3,8 +3,13 @@ from flask import Flask, render_template, request, redirect, flash
 import sqlite3
 import csv
 from flask import Response
+from flask import send_from_directory
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder=".",
+    static_folder="."
+)
 app.secret_key = "mini_crm_secret"
 
 @app.route("/export")
@@ -251,6 +256,15 @@ def search_customer():
         customers=customers,
         customer_count=customer_count
     )
+
+@app.route("/style.css")
+def style_css():
+    return send_from_directory(".", "style.css")
+
+
+@app.route("/script.js")
+def script_js():
+    return send_from_directory(".", "script.js")
 
 
 # =========================
